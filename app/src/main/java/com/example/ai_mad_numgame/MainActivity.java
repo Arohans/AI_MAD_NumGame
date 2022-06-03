@@ -118,6 +118,16 @@ public class MainActivity extends AppCompatActivity {
                 button3.setText(""+a2);
                 button1.setText(""+a3);
             }
+            //if operand 2 is not 0
+        } else if(n==0){
+            ans=o1+o2;
+        }else if(n==1){
+            ans=o1-o2;
+        }else if(n==2){
+            ans=o1*o2;
+        }else if(n==3){
+            ans=o1/o2;
+        }
       // Your code here, to diplay correct and incorrect options on the buttons
 
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
