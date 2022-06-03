@@ -71,11 +71,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void newMatch() {  //A game is composed of three matches
 
-        int operand1 = random.nextInt(10);
-        int operand2=random.nextInt(10);
+        double o1 = random.nextInt(10);
+        double o2=random.nextInt(10);
+        //Creating Random Answers for Buttons as well as the correct button
+        correctButton=random.nextInt(4); //correct Button
+        double a1 = random.nextInt(10); //random incorrect answers
+        double a2 = random.nextInt(10);
+        double a3 = random.nextInt(10);
+
+        int n=random.nextInt(4);//assigning Operator
+        double ans=0;
+        while(a1==ans || a2==ans || a3==ans){
+            if(a1==ans)
+                a1 = random.nextInt(010);
+            if(a2==ans)
+                a2 = random.nextInt(10);
+            if(a3==ans)
+                a3 = random.nextInt(10);
+        }
+        double t=ans%0.1;
+        ans=ans-t;
         //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
         String operator = operators[random.nextInt(4)];
-        textView2.setText(operand1 + operator + operand2);
+        textView2.setText(o1 + operator + o2);
 
       // Your code here, to diplay correct and incorrect options on the buttons
 
