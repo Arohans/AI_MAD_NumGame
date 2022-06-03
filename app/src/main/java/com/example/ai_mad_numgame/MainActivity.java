@@ -129,7 +129,18 @@ public class MainActivity extends AppCompatActivity {
             ans=o1/o2;
         }
       // Your code here, to diplay correct and incorrect options on the buttons
-
+        if(correctButton==0 && !(o2==0 && n==3)){
+            button1.setText(String.format("%.1f", ans));
+            button2.setText(""+a1);
+            button3.setText(""+a2);
+            button4.setText(""+a3);
+        }else if(correctButton==1 && !(o2==0 && n==3)){
+            button2.setText(String.format("%.1f", ans));
+            button1.setText(""+a1);
+            button3.setText(""+a2);
+            button4.setText(""+a3);
+        }
+        }
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
             matchCounter=0;
