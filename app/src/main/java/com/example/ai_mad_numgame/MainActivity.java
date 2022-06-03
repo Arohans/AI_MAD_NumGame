@@ -115,6 +115,12 @@ public class MainActivity extends AppCompatActivity {
     public String getInterpretation(int [][]dataFrame,double slope){
        //provide interpretation based on your slope analysis
         // Your code here
-        return "Your Interpretation";
+        if (slope == 0 && slope <= .5)
+            return "you are constantly great";
+        else if (slope > .5 && slope < 1)
+            return "you are doing good";
+        else
+            return "improve";
+
     }
 }
