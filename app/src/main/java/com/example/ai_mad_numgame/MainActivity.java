@@ -139,7 +139,16 @@ public class MainActivity extends AppCompatActivity {
             button1.setText(""+a1);
             button3.setText(""+a2);
             button4.setText(""+a3);
-        }
+        }else if(correctButton==2 && !(o2==0 && n==3)){
+            button3.setText(String.format("%.1f", ans));
+            button2.setText(""+a1);
+            button1.setText(""+a2);
+            button4.setText(""+a3);
+        }else if(correctButton==3 && !(o2==0 && n==3)){
+            button4.setText(String.format("%.1f", ans));
+            button2.setText(""+a1);
+            button3.setText(""+a2);
+            button1.setText(""+a3);
         }
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
 
