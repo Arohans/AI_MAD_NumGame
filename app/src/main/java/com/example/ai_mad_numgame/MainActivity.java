@@ -91,10 +91,33 @@ public class MainActivity extends AppCompatActivity {
         }
         double t=ans%0.1;
         ans=ans-t;
-        //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
+
         String operator = operators[random.nextInt(4)];
         textView2.setText(o1 + operator + o2);
 
+        //check is operand2 is not zero; otherwise in case of division-divide by zero error will come
+        if(o2==0 && n==3){
+            if(correctButton==0){
+                button1.setText("ND");
+                button2.setText(""+a1);
+                button3.setText(""+a2);
+                button4.setText(""+a3);
+            }else if(correctButton==1){
+                button2.setText("ND");
+                button1.setText(""+a1);
+                button3.setText(""+a2);
+                button4.setText(""+a3);
+            }else if(correctButton==2){
+                button3.setText("ND");
+                button2.setText(""+a1);
+                button1.setText(""+a2);
+                button4.setText(""+a3);
+            }else if(correctButton==3){
+                button4.setText("ND");
+                button2.setText(""+a1);
+                button3.setText(""+a2);
+                button1.setText(""+a3);
+            }
       // Your code here, to diplay correct and incorrect options on the buttons
 
         if(matchCounter==3){    // if three matches are completed updatee the perfomrance in sharedpreferences
